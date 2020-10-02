@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+<data class="ResultdetailsBinding">
+    <import type="android.view.View"/>
+    <variable
+        name="question"
+        type="com.devparadigam.agrade.model.response.youtube.TestQueModel" />
+
+</data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sp_10"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/sp_10"
+                        android:orientation="vertical"
+                        android:background="@drawable/white_grey_border_bottom">
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_200dp"
+                            android:maxHeight="@dimen/dimen_200dp"
+                            android:id="@+id/queImage"
+                            android:visibility="@{question.image==null ? View.GONE : View.VISIBLE}"
+                            android:layout_gravity="left"
+                            bind:loadimage="@{question.image}"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/queText"
+                                tools:text="dfsdfsfsf"
+                                android:text="@{question.question}"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/sp_10"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/bottom_cornor_bg">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:padding="@dimen/dimen_2dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb1"
+                                    android:text="@{question.opt1}"
+                                    android:textColor="@{question.selectedAns.equalsIgnoreCase(`a`) ? @color/green_common : @color/black}"
+                                    android:background="@{question.answer.equalsIgnoreCase(`a`) ? @drawable/subs_green : @drawable/bottom_cornor_bg}"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb2"
+                                    android:text="@{question.opt2}"
+                                    android:textColor="@{question.selectedAns.equalsIgnoreCase(`b`) ? @color/green_common : @color/black}"
+                                    android:background="@{question.answer.equalsIgnoreCase(`b`) ? @drawable/subs_green : @drawable/bottom_cornor_bg}"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb3"
+                                    android:text="@{question.opt3}"
+                                    android:textColor="@{question.selectedAns.equalsIgnoreCase(`c`) ? @color/green_common : @color/black}"
+                                    android:background="@{question.answer.equalsIgnoreCase(`c`) ? @drawable/subs_green : @drawable/bottom_cornor_bg}"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb4"
+                                    android:text="@{question.opt4}"
+                                    android:textColor="@{question.selectedAns.equalsIgnoreCase(`d`) ? @color/green_common : @color/black}"
+                                    android:background="@{question.answer.equalsIgnoreCase(`d`) ? @drawable/subs_green : @drawable/bottom_cornor_bg}"/>
+
+                                <TextView
+                                    android:visibility="@{question.opt5==null ? View.GONE : View.VISIBLE}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb5"
+                                    android:text="@{question.opt5}"
+                                    android:textColor="@{question.selectedAns.equalsIgnoreCase(`e`) ? @color/green_common : @color/black}"
+                                    android:background="@{question.answer.equalsIgnoreCase(`e`) ? @drawable/subs_green : @drawable/bottom_cornor_bg}"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/sp_10"
+                android:padding="@dimen/dp_10">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Solution >>"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:visibility="@{question.solutionImage==null ? View.GONE : View.VISIBLE}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_200dp"
+                    android:maxHeight="@dimen/dimen_200dp"
+                    bind:loadimage="@{question.solutionImage}"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@{question.solution}"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+</layout>

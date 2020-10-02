@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data class="ExamTypeFragBinding" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="com.devparadigam.agrade.ui.fragments.ExamTypeFragment">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/backg" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/sp_10"
+                android:text="@string/Select_Category"
+                android:textStyle="bold"
+                android:textSize="@dimen/dp_20"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dimen_150dp"/>
+
+        </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.50"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_20">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight=".5"
+                        android:id="@+id/linearBank"
+                        android:background="@drawable/examtypeback"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/bank"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:src="@drawable/bank2"
+                            android:tint="@color/colorPrimary"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/sp_10"
+                            android:textColor="@color/black"
+                            android:text="@string/Bank_Exams" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight=".5"
+                        android:id="@+id/linearSsc"
+                        android:background="@drawable/examtypeback"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ssc"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:src="@drawable/ssc_icon"
+                            android:tint="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/sp_10"
+                            android:textColor="@color/black"
+                            android:text="@string/ssc_Exams" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_20">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:id="@+id/linearRailway"
+                        android:background="@drawable/examtypeback"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/railway"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="50dp"
+                            android:src="@drawable/railway_icon"
+                            android:tint="@color/colorPrimary"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/sp_10"
+                            android:textColor="@color/black"
+                            android:text="@string/railway_exam" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:id="@+id/linearhistory"
+                        android:background="@drawable/examtypeback"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/testHistory"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="50dp"
+                            android:tint="@color/colorPrimary"
+                            android:src="@drawable/testhistory_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/sp_10"
+                            android:textColor="@color/black"
+                            android:text="@string/Exam_History" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"/>
+
+    </LinearLayout>
+</layout>

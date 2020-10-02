@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.devparadigam.agrade"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 4
+        versionName "1.4"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        resConfigs "en","hi"
+    }
+
+    dataBinding {
+        enabled = true;
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+
+    /*----------------Firebase----------------------------*/
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.github.manojoptisoftgit:otpviewlayout:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+
+    /*-----------------RETROFIT DEPENDENCIES-----------------------*/
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.1'
+
+    /*Navigation Project*/
+    implementation(name: "fluidbottomnavigation-debug", ext: "aar")
+
+    /*=----------IMAGE CROPPER--------------------*/
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+
+
+    /*------------GOOGLE LOGIN--------------*/
+//    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    /*-----Modules----------------*/
+    implementation project(path: ':social')
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
+    implementation project(path: ':locationmodule')
+
+
+    implementation 'com.facebook.android:account-kit-sdk:5.+'
+    implementation(name: "truesdk-0.7-releasePartner", ext: "aar")
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'com.google.android.libraries.places:places:2.0.0'
+
+    /*-----------PIX IMAGE PICKER-------------*/
+    implementation 'com.fxn769:pix:1.4.4'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+//    implementation 'com.chaos.view:pinview:1.4.3'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation "com.github.skydoves:progressview:1.0.5"
+    implementation "com.pdfview:pdfview-android:1.0.0"
+
+    // payment gayways
+    implementation 'com.razorpay:checkout:1.5.12'
+    //implementation 'com.sasidhar.smaps.payumoney:payumoney:0.0.3'
+//    implementation 'com.payumoney.sdkui:plug-n-play:1.5.0'
+    implementation 'com.payumoney.sdkui:plug-n-play:1.5.0'
+
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"

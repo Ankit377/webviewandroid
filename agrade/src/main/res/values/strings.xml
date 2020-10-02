@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">AGrade Classes</string>
+
+
+    <!--Login-->
+    <string name="Login">Login</string>
+    <string name="Enter_your_mobile_number">Enter your mobile number</string>
+    <string name="digit_mobile_number">10 digit moblie number</string>
+    <string name="user_name">Username</string>
+    <string name="OR">OR</string>
+
+    <!--Details Screens-->
+    <string name="Enter_your_Otp">Enter Otp to Get Sarted</string>
+    <string name="Name">Name</string>
+    <string name="Next">Next</string>
+    <string name="SEND">SEND</string>
+    <string name="Submit">SUBMIT</string>
+    <string name="Enter_your_email_address">Enter your email address</string>
+    <string name="loading">Loading...</string>
+
+    <!---Address screeen - -->
+
+    <!--Card Details-->
+
+
+    <string name="price">Price</string>
+    <string name="Term_of_services">Terms and Conditions</string>
+    <string name="January_2020">february 2020</string>
+    <string name="Last_Update">Last Update</string>
+    <string name="Version">Version</string>
+    <string name="Select_Category">Select Category</string>
+    <string name="Bank_Exams">Bank Exams</string>
+    <string name="ssc_Exams">SSC Exams</string>
+    <string name="railway_exam">Railway Exams</string>
+    <string name="Exam_History">Exam History</string>
+    <string name="product_name">Test name</string>
+    <string name="Payment_details">Payment Details</string>
+    <string name="Resend">Resend</string>
+    <string name="Previous">Previous</string>
+    <string name="Attempted">Attempted</string>
+    <string name="Unattempted">Not Attempted</string>
+    <string name="Marked">Marked</string>
+    <string name="Active">Active</string>
+    <string name="Submit_Test">Submit Test</string>
+    <string name="Select_Your_Language">Select Your Language</string>
+    <string name="Test_history">Test history</string>
+    <string name="Instructions">Instructions</string>
+    <string name="Minutes">Minutes</string>
+    <string name="Questions">Questions</string>
+    <string name="Marks">Marks</string>
+    <string name="Language_Selection">Language Selection</string>
+    <string name="switchable">Switchable</string>
+    <string name="Start_Test">Start Test</string>
+    <string name="content"> Check the exam timetable carefully. Make sure you know the time and locations of your exams. Check whether youshouldgo directly to an exam hall or a waiting room. \n  Bring your Student IDBookletor University Library Card (i.e. 650****). You will not be allowed into the exam hall without these.\n Do not bring any unauthorised material (e.g. written notes, notes in dictionaries, paper,andsticky tape eraser). Pencil cases and glasses cases must not be taken to your desks. These will be checked and confiscated.\n You are allowed to bring tissues and a drink (but not food) into the exam.\n Ensure that you use the washroom before arriving for your exam as you will not be permitted to leave during the first hour. In the case of listening and oral exams you maynot be allowed to leave during the exam.\n Normally, you are required to answer questions using blue or black ink. Make sure you bring some spare pens with you. Do not bring a pencil case.\n Arrive at least 15 minutesbefore the exam is due to start (30 minutesbefore if your exam is in the Auditorium; TB329or SSB329) and wait outside until you are allowed in. If you have to go to a holding room first, please arrive at the time stated</string>
+    <string name="Analysis">Analysis</string>
+    <string name="Correct_Answered">Correct Answered</string>
+    <string name="Incorrect">Incorrect</string>
+    <string name="Not_Answered">Not Answered</string>
+    <string name="Total_Marks">Total Marks</string>
+    <string name="Obtained_Marks">Obtained Marks</string>
+    <string name="Details">Details</string>
+    <string name="not_visited">Not Visited</string>
+    <string name="Time_Remaining">Time Remaining</string>
+    <string name="Attempt_Test_Now">Attempt Test Now</string>
+    <string name="unlock">Unlock Test Now</string>
+    <string name="Mark_As_Review">Mark As Review</string>
+    <string name="Clear_Response">Clear Response</string>
+    <string name="Logout">Logout</string>
+    <string name="hello">Hello</string>
+
+
+    <!--TOOLBAR-->
+    <string name="welcome_to_A_Grade_Classes">welcome to A Grade Classes</string>
+
+
+    <!--Home Screen BOTTOM NAV -->
+    <string name="nav_study_material">Study Material</string>
+    <string name="nav_contact_us">Contact us</string>
+
+    <!--Social Credintials-->
+    <string name="facebook_app_id" translatable="false">486351015500854</string>
+    <string name="partnerKey" translatable="false">XK2tCaddfb9b65b6748d496adba47c3c2e39a</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN" translatable="false">5ae7629e42691a9ede6b940cc37f5e65</string>
+    <string name="client_id" translatable="false">535952382371-uj9p56v19ksr8uiibdpo0pl2keenh35o.apps.googleusercontent.com</string>
+
+    <!--YouTube Playliist API-->
+
+    <string name="youTube_Api_key" translatable="false">AIzaSyArkFoViXDXKEGpVOzm1BtG-tjj7ImSvy0</string>
+    <!--    <string name="playList_Key" translatable="false">PLjwBf9QEIO95cgB6Wie0-ZginhTwcqbPj</string>-->
+    <string name="playList_Key" translatable="false">PLvSeiETiDD0m9eYl3QTCXV7ylUVz4l6aX</string>
+
+
+    <!--Place api Key-->
+
+    <string name="english" translatable="false">English</string>
+    <string name="hindi" translatable="false">हिंदी</string>
+
+    <array name="language">
+        <item>@string/english</item>
+        <item>@string/hindi</item>
+    </array>
+
+</resources>

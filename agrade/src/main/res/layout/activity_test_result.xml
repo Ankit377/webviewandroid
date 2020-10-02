@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <data class="TestResultBinding">
+
+        <variable
+            name="testResult"
+            type="com.devparadigam.agrade.model.response.ResultModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="com.devparadigam.agrade.ui.activiries.TestResultActivity">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/backg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/sp_10"
+                    android:text="@{testResult.testName}"
+                    android:textSize="@dimen/dp_20"
+                    android:textStyle="bold"
+                    tools:text="Mock Test 2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/sp_10"
+                    android:text="@string/Analysis"
+                    android:textSize="@dimen/dp_30"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/piechart"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_200dp"
+                android:layout_weight=".5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.skydoves.progressview.ProgressView
+                android:id="@+id/progressView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="20dp"
+                app:progressView_colorBackground="@color/gray"
+                app:progressView_colorGradientEnd="@color/colorPrimaryDark"
+                app:progressView_colorGradientStart="@color/colorPrimary"
+                app:progressView_colorProgress="@color/colorPrimary"
+                app:progressView_highlightAlpha="0.8"
+                app:progressView_highlightColor="@color/accentColor"
+                app:progressView_highlightWidth="1dp"
+                app:progressView_labelColorInner="@color/white"
+                app:progressView_labelColorOuter="@color/black"
+                app:progressView_labelSize="13sp"
+                app:progressView_labelSpace="10dp"
+                app:progressView_labelTypeface="bold"
+                app:progressView_padding="1dp"
+                app:progressView_min="1"
+                app:progressView_max="100"
+                app:progressView_radius="12dp" />
+
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/Correct_Answered"
+                android:textColor="@color/green_btn"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:id="@+id/answered"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="@{testResult.correctAnswer}"
+                android:textColor="@color/green_btn"
+                android:textSize="20sp"
+
+                tools:text="10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/Incorrect"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:id="@+id/incorrect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="@{testResult.incorrectAnswer}"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+
+                tools:text="10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/Not_Answered"
+                android:textColor="@color/yellow_400"
+                android:textSize="20sp"
+                   />
+
+            <TextView
+                android:id="@+id/notAnswered"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="@{testResult.notAttempt}"
+                android:textColor="@color/yellow_400"
+                android:textSize="20sp"
+
+                tools:text="10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/Total_Marks"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:id="@+id/notvisited"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="@{testResult.totalMarks}"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                tools:text="100" />
+
+        </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/Obtained_Marks"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:id="@+id/obtainedmarks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="@{testResult.marks}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+
+                tools:text="10" />
+
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/subs_round"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/Details"/>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

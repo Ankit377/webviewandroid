@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="Test_Binding">
+        <import type="android.view.View" />
+
+        <variable
+            name="question"
+            type="com.devparadigam.agrade.model.response.QuestionModel" />
+
+
+        <variable
+            name="testQuestion"
+            type="com.devparadigam.agrade.model.response.youtube.TestQueModel" />
+
+        <variable
+            name="testmodel"
+            type="com.devparadigam.agrade.model.response.TestModel" />
+
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+
+        tools:context="com.devparadigam.agrade.com.devparadigam.testseries.ui.activiries.Test_Activity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:subtitle="@string/app_name"
+                app:subtitleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_weight=".1"
+                android:background="@drawable/white_grey_border_bottom"
+                android:orientation="horizontal"
+                android:padding="@dimen/sp_10">
+
+                <TextView
+                    android:id="@+id/pageCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".06"
+                    android:text="1"/>
+                <TextView
+                    android:id="@+id/pageCounttext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".39"
+                    android:text="of 90" />
+
+                <TextView
+                    android:id="@+id/timeCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".70"
+                    android:text="@{``+testmodel.time}"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".8"
+                android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_middle"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_marginRight="@dimen/spacing_middle"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/sp_10"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/sp_10"
+                            android:background="@drawable/white_grey_border_bottom">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{``+testQuestion.question}"
+                                    android:id="@+id/queText"/>
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_30"
+                                    android:id="@+id/bookmark"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right"
+                                    app:srcCompat="@drawable/ic_bookmark"/>
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/sp_10"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RadioGroup
+                                    android:id="@+id/examGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:padding="@dimen/dimen_2dp">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@{``+testQuestion.opt1}"
+                                        android:id="@+id/rb1"/>
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@{``+testQuestion.opt2}"
+                                        android:id="@+id/rb2"/>
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@{``+testQuestion.opt3}"
+                                        android:id="@+id/rb3"/>
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@{``+testQuestion.opt4}"
+                                        android:id="@+id/rb4"/>
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@{``+testQuestion.opt5}"
+                                        android:id="@+id/rb5"/>
+
+                                </RadioGroup>
+
+                            </LinearLayout>
+
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_10">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="Mark As Review"
+                        android:id="@+id/mar"
+                        android:gravity="center"
+                        android:padding="@dimen/sp_10"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/shape_rounded_trans"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="Clear Response"
+                        android:padding="@dimen/sp_10"
+                        android:id="@+id/Cr"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/sp_10"
+                        android:background="@drawable/shape_rounded_trans"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:background="@drawable/white_grey_border_top"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="@dimen/sp_10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3">
+
+                    <TextView
+                        android:id="@+id/previous"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="@dimen/dp_20"
+                        android:text="Previous"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4">
+
+                    <ImageView
+                        android:id="@+id/btnSheet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_menu"
+                        android:layout_gravity="center"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3">
+
+                    <TextView
+                        android:id="@+id/next"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/dp_20"
+                        android:layout_gravity="center"
+                        android:text="@string/Next"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <include layout="@layout/bottom_sheet_layot" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_material"
+        android:icon="@drawable/metrail"
+        android:title="Study Material" />
+    <item
+        android:id="@+id/navigation_youtube"
+        android:icon="@drawable/youtube_b"
+        android:title="Youtube" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+</menu>

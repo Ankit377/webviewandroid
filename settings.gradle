@@ -1,0 +1,3 @@
+include ':agrade'
+include ':app'
+rootProject.name = "WebViewExample"

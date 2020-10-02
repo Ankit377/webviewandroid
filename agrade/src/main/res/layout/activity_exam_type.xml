@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="ExamTypeBinding"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.devparadigam.agrade.com.devparadigam.testseries.ui.activiries.ExamTypeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dimen_100dp"
+            android:paddingBottom="100dp"
+            android:text="Select your category"
+            android:textSize="@dimen/dp_30"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_30"
+            android:paddingRight="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/banking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_bg_selector_address"
+                android:gravity="center"
+                android:text="Banking" />
+
+            <TextView
+                android:id="@+id/railway"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/radio_bg_selector_address"
+                android:gravity="center"
+                android:text="Railway" />
+
+            <TextView
+                android:id="@+id/ssc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/radio_bg_selector_address"
+                android:gravity="center"
+                android:text="SSC" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</layout>

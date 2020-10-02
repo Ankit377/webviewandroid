@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="@dimen/dimen_16dp"
+    app:cardUseCompatPadding="true"
+    android:elevation="@dimen/dimen_16dp">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_border"
+            android:elevation="@dimen/dimen_16dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:gravity="center"
+                android:text="@string/Time_Remaining"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                app:srcCompat="@drawable/ic_close" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="00:09:59"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/Correct_Answered"
+                android:textColor="@color/green_common"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:id="@+id/answered"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="10"
+                android:textColor="@color/green_common"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/sp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/Not_Answered"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:id="@+id/notanswered"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="10"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/sp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/Marked"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:id="@+id/marked"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="10"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/sp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:text="@string/not_visited"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                 />
+
+            <TextView
+                android:id="@+id/notvisited"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:text="10"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                 />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/dimen_40dp"
+            android:paddingRight="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/sp_10"
+            android:background="@drawable/shape_rounded_orange"
+            android:text="@string/Submit_Test"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+

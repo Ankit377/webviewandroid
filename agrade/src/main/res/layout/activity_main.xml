@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="MainBinding"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/match">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.devparadigam.agrade.ui.activiries.MainActivity"
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/homeContainer"
+        android:layout_above="@+id/bottom_navigation"
+        >
+
+
+
+    </FrameLayout>
+
+    <!--<com.tenclouds.fluidbottomnavigation.FluidBottomNavigation
+        android:id="@+id/fluidBottomNavigation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:height="?attr/actionBarSize"
+        app:accentColor="@color/colorPrimary"
+        app:backColor="@color/backColor"
+        app:iconSelectedColor="@color/colorPrimary"
+        app:iconColor="@color/gray_7e"
+        app:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        />-->
+  <!--  <com.tenclouds.fluidbottomnavigation.FluidBottomNavigation
+        android:id="@+id/fluidBottomNavigation"
+        android:layout_height="@dimen/dimen_70dp"
+        android:layout_width="match_parent"
+        app:height="?attr/actionBarSize"
+        app:accentColor="@color/colorPrimary"
+        app:backColor="@color/backColor"
+        app:iconSelectedColor="@color/colorPrimary"
+        app:iconColor="@color/gray_7e"
+        app:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        />-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:menu="@menu/bottom_navigation_menu"
+        />
+
+
+
+</RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

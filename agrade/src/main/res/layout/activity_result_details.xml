@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ResultDeatilsBinding">
+        <import type="android.view.View" />
+
+
+      <!--  <variable
+            name="questionList"
+            type="java.util.List&lt;com.devparadigam.agrade.model.response.youtube.TestQueModel&gt;" />
+-->
+        <variable
+            name="subjects"
+            type="java.util.List&lt;com.devparadigam.agrade.model.data.SubjectOperation&gt;" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        tools:context="com.devparadigam.agrade.com.devparadigam.testseries.ui.activiries.Test_Activity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:contentInsetStartWithNavigation="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:subtitle="@string/welcome_to_A_Grade_Classes"
+                app:subtitleTextAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                app:subtitleTextColor="@color/grey_10"
+                app:title="@string/app_name" >
+
+            </androidx.appcompat.widget.Toolbar>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_weight=".1"
+                android:background="@drawable/white_grey_border_bottom"
+                android:orientation="horizontal"
+                android:padding="@dimen/sp_10">
+
+                <TextView
+                    android:id="@+id/queInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".30"
+                    android:text="1"/>
+
+                <TextView
+                    android:id="@+id/timeCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight=".40"
+                    tools:text="00:00"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/timeCountSubb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight=".30"
+                    tools:text="00:00"
+                    android:textColor="@color/red"
+                    />
+
+
+            </LinearLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/questionsViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".82"
+                android:background="@color/white"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".08"
+                android:background="@drawable/white_grey_border_top"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="@dimen/sp_10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3">
+
+                    <TextView
+                        android:id="@+id/previous"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="@dimen/dp_20"
+                        android:text="@string/Previous"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4">
+
+                    <ImageView
+                        android:id="@+id/btnSheet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/q_list"
+                        android:layout_gravity="center"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3">
+
+                    <TextView
+                        android:id="@+id/next"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/dp_20"
+                        android:layout_gravity="center"
+                        android:text="@string/Next"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/bottomSheetLayout"
+            layout="@layout/bottom_sheet_layot"
+            bind:testnew="@{subjects}"
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

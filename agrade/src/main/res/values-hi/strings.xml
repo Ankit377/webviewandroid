@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">एग्रेड क्लासेस</string>
+
+
+    <!--Login-->
+    <string name="Login">लॉग इन करें</string>
+    <string name="Enter_your_mobile_number">अपना मोबाइल नंबर दर्ज करें</string>
+    <string name="digit_mobile_number">10 अंकों का मोबिल नंबर</string>
+    <string name="user_name">नाम</string>
+    <string name="OR">OR</string>
+
+    <string name="price">कीमत</string>
+    <string name="Term_of_services">नियम और शर्तें</string>
+    <string name="January_2020">फरवरी 2020</string>
+    <string name="Last_Update">आखिरी अपडेट</string>
+    <string name="Version">संस्करण</string>
+    <string name="Select_Category">श्रेणी का चयन करें</string>
+    <string name="Bank_Exams">बैंक परीक्षा</string>
+    <string name="ssc_Exams">एसएससी परीक्षा</string>
+    <string name="railway_exam">रेलवे परीक्षा</string>
+    <string name="Exam_History">परीक्षा का इतिहास</string>
+    <string name="product_name">परीक्षण का नाम</string>
+    <string name="Payment_details">भुगतान विवरण</string>
+    <string name="Resend">पुन: भेजें</string>
+    <string name="Previous">पिछला</string>
+    <string name="Attempted">का प्रयास किया गया</string>
+    <string name="Unattempted">प्रयास नहीं किया</string>
+    <string name="Marked">चिह्नित</string>
+    <string name="Active">सक्रिय</string>
+    <string name="Submit_Test">टेस्ट जमा करें</string>
+    <string name="Select_Your_Language">अपनी भाषा का चयन करें</string>
+    <string name="Test_history">परीक्षा इतिहास</string>
+    <string name="Instructions">अनुदेश</string>
+    <string name="Minutes">मिनट</string>
+    <string name="Questions">प्रशन</string>
+    <string name="Marks">अंक</string>
+    <string name="Language_Selection">भाषा चयन</string>
+    <string name="Start_Test">टेस्ट शुरू करें</string>
+    <string name="content">परीक्षा की समय सारिणी को ध्यान से देखें। सुनिश्चित करें कि आप अपनी परीक्षा का समय और स्थान जानते हैं। जांचें कि क्या आप सीधे एग्जाम हॉल या वेटिंग रूम में जा रहे हैं। \ n n अपना छात्र IDBookletor University Library Card (यानी 650 ****) लाएं। आपको इनके बिना परीक्षा हॉल में जाने की अनुमति नहीं होगी। \ n not कोई भी अनधिकृत सामग्री (जैसे लिखित नोट्स, शब्दकोशों में नोट, कागज, और अस्थिर टेप इरेज़र) नहीं लाएँगे। पेंसिल मामलों और चश्मे के मामलों को आपके डेस्क पर नहीं ले जाना चाहिए। इन्हें जांचा जाएगा और जब्त कर लिया जाएगा। \ n be आपको परीक्षा में उत्तक और एक पेय (लेकिन भोजन नहीं) लाने की अनुमति दी गई है। \ n कि आप अपनी परीक्षा के लिए आने से पहले वाशरूम का उपयोग करें क्योंकि आपको बाहर जाने की अनुमति नहीं होगी। पहले घंटे के दौरान। सुनने और मौखिक परीक्षा के मामले में आपको परीक्षा के दौरान छोड़ने की अनुमति नहीं दी जा सकती है। \ n सामान्य तौर पर, आपको नीली या काली स्याही का उपयोग करके प्रश्नों का उत्तर देना होगा। सुनिश्चित करें कि आप अपने साथ कुछ अतिरिक्त पेन लाएँ। एक पेंसिल केस न लाएँ। \ n be कम से कम 15 मिनट के बाद परीक्षा शुरू करें (30 मिनट के बाद परीक्षा शुरू होने के कारण अगर आपका परीक्षा सभागार में है; और जब तक आपको अनुमति नहीं दी जाती है, तब तक प्रतीक्षा करें। पहले एक होल्डिंग रूम, कृपया बताए गए समय पर पहुंचें</string>
+    <string name="Analysis">विश्लेषण</string>
+    <string name="Correct_Answered">सही उत्तर दिया गया</string>
+    <string name="Incorrect">ग़लत</string>
+    <string name="Not_Answered">जवाब नहीं दिया</string>
+    <string name="Total_Marks">कुल अंक</string>
+    <string name="Obtained_Marks">प्राप्त अंक</string>
+    <string name="Details">विवरण</string>
+    <string name="not_visited">देखा नहीं गया</string>
+    <string name="Time_Remaining">समय शेष</string>
+    <string name="Attempt_Test_Now">अब टेस्ट का प्रयास करें</string>
+    <string name="unlock">सभी टेस्ट अनलॉक करें</string>
+    <string name="Mark_As_Review">समीक्षा के रूप में चिह्नित करें</string>
+    <string name="Clear_Response">स्पष्ट प्रतिक्रिया</string>
+    <string name="Logout">लॉग आउट</string>
+    <string name="hello">नमस्कार</string>
+
+    <!--TOOLBAR-->
+    <string name="welcome_to_A_Grade_Classes">एग्रेड कक्षाओं में आपका स्वागत है</string>
+
+    <!--Card Details-->
+
+
+    <!--Home Screen BOTTOM NAV -->
+    <string name="nav_study_material">अध्ययन सामग्री</string>
+    <string name="nav_contact_us">संपर्क करें</string>
+
+
+    <!--Details Screens-->
+    <string name="Enter_your_Otp">प्रारंभ करने के लिए Otp दर्ज करें</string>
+    <string name="Name">नाम</string>
+    <string name="Next">आगे</string>
+    <string name="SEND">भेजें</string>
+    <string name="Submit">प्रस्तुत</string>
+    <string name="Enter_your_email_address">अपना ईमेल पता दर्ज करें</string>
+    <string name="loading">लोड हो रहा है...</string>
+
+    <!---Address screeen - -->
+
+</resources>

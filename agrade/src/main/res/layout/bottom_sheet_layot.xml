@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="testnew"
+            type="java.util.List&lt;com.devparadigam.agrade.model.data.SubjectOperation&gt;"/>
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_f5"
+    android:orientation="vertical"
+    android:padding="@dimen/sp_10"
+    android:elevation="@dimen/dp_5"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/card_border">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:id="@+id/down_arrow"
+        app:srcCompat="@drawable/ic_expand_arrow"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/Attempted"
+                    android:drawableTint="@color/green_common"
+                    android:drawableLeft="@drawable/ic_dot"
+                    android:id="@+id/attempted"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/Unattempted"
+                    android:drawableTint="@color/white"
+                    android:drawableLeft="@drawable/ic_dot"
+                    android:id="@+id/unattempted"/>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/Marked"
+                    android:drawableTint="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_bookmark"
+                    android:id="@+id/marked"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/Active"
+                    android:drawableTint="@color/black"
+                    android:drawableLeft="@drawable/ic_dot"
+                    android:id="@+id/active"/>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#5d5d5d" />
+<!--
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/subject_chips_layout_design"
+                android:id="@+id/subjectChipsRecycler"/>-->
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+            <RadioGroup
+                android:id="@+id/subGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:padding="@dimen/dimen_2dp"
+                bind:setSubjectGroup="@{testnew}"/>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#5d5d5d" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/recyclerBottomSheet"
+       android:orientation="horizontal"
+       app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+       app:spanCount="3"
+       android:scrollbars="horizontal"
+       tools:itemCount="90"
+       tools:listitem ="@layout/que_layout_design"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        android:background="#5d5d5d" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="@dimen/dimen_40dp"
+        android:paddingRight="@dimen/dimen_40dp"
+        android:background="@drawable/shape_rounded_orange"
+        android:id="@+id/submitTest"
+        android:layout_gravity="center"
+        android:text="@string/Submit_Test"
+        android:textColor="#fff" />
+</LinearLayout>
+</LinearLayout>
+</layout>

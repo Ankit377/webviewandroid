@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+<data class="QuestionBinding">
+    <import type="android.view.View"/>
+    <variable
+        name="question"
+        type="com.devparadigam.agrade.model.response.youtube.TestQueModel" />
+
+</data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sp_10"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/sp_10"
+                        android:orientation="vertical"
+                        android:background="@drawable/white_grey_border_bottom">
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_200dp"
+                            android:maxHeight="@dimen/dimen_200dp"
+                            android:id="@+id/queImage"
+                            android:visibility="@{question.image==null ? View.GONE : View.VISIBLE}"
+                            android:layout_gravity="left"
+                            bind:loadimage="@{question.image}"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/queText"
+                                tools:text="dfsdfsfsf"
+                                android:text="@{question.question}"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/sp_10"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/examGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:padding="@dimen/dimen_2dp">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb1"
+
+                                    android:text="@{question.opt1}"
+                                    android:checked="@{question.selectedAns.equalsIgnoreCase(`a`) ? true : false}"
+                                    />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb2"
+                                    android:text="@{question.opt2}"
+                                    android:checked="@{question.selectedAns.equalsIgnoreCase(`b`) ? true : false}"
+                                    />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb3"
+                                    android:text="@{question.opt3}"
+                                    android:checked="@{question.selectedAns.equalsIgnoreCase(`c`) ? true : false}"
+                                    />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb4"
+                                    android:text="@{question.opt4}"
+                                    android:checked="@{question.selectedAns.equalsIgnoreCase(`d`) ? true : false}"/>
+
+                                <RadioButton
+                                    android:visibility="@{question.opt5==null ? View.GONE : View.VISIBLE}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rb5"
+                                    android:text="@{question.opt5}"
+                                    android:checked="@{question.selectedAns.equalsIgnoreCase(`e`) ? true : false}"/>
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/sp_10"
+                android:padding="@dimen/dp_10">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Mark_As_Review"
+                    android:id="@+id/mark"
+                    android:gravity="center"
+                    android:padding="@dimen/sp_10"
+                    android:textColor="@color/colorPrimary"
+                    android:drawableLeft="@{question.bookmarked ? @drawable/ic_bookmark : null}"
+                    android:drawableTint="@color/colorPrimary"
+                    android:background="@drawable/shape_rounded_trans"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Clear_Response"
+                    android:padding="@dimen/sp_10"
+                    android:id="@+id/ClearResponse"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/sp_10"
+                    android:background="@drawable/shape_rounded_trans"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+</layout>
